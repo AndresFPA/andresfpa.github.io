@@ -22,20 +22,6 @@ export const experience = [
       "Presented findings at international conferences, contributing to advancements in quantitative psychology.",
       "Collaborated with interdisciplinary teams to enhance research methodologies.",
     ],
-    tags: ["Psychometrics", "Structural Equation Modeling", "Data Analysis"],
-    icon: "university",
-  },
-  {
-    title: "Elsevier",
-    duration: "2020",
-    subtitle: "Data Analyst",
-    details: [
-      "Analyzed large datasets to inform strategic decisions in academic publishing.",
-      "Developed predictive models to enhance understanding of publication trends.",
-      "Collaborated with cross-functional teams to improve data-driven processes.",
-    ],
-    tags: ["Data Analysis", "Predictive Modeling", "Collaboration"],
-    icon: "chart-line",
   },
 ];
 
@@ -45,16 +31,6 @@ export const education = [
     duration: "2019 - 2021",
     subtitle: "Leiden University",
     details: ["Specialized in advanced statistical techniques and research methodologies."],
-    tags: ["Methodology", "Statistics", "Research"],
-    icon: "graduation-cap",
-  },
-  {
-    title: "B.Sc. in Psychology",
-    duration: "2014 - 2019",
-    subtitle: "Universidad Nacional de Colombia",
-    details: ["Focused on psychometrics and sports psychology."],
-    tags: ["Psychology", "Psychometrics", "Sports Psychology"],
-    icon: "book",
   },
 ];
 

@@ -5,17 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Andres Felipe Perez Alonso - Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Portfolio of Andres Felipe Perez Alonso" />
+    <meta name="description" content="Portfolio webpage of Andres Felipe Perez Alonso" />
     <meta name="author" content="Andres Felipe Perez Alonso" />
-    <link rel="icon" type="image/png" href="./img/profile.jpg" />
     <link rel="stylesheet" href="css/style.css" />
     <script type="module" src="js/index.js"></script>
   </head>
   <body>
-    <div id="bio"></div>
-    <div id="skills"></div>
-    <div id="experience"></div>
-    <div id="education"></div>
-    <footer id="footer"></footer>
+    <div id="colorlib-page">
+      <aside id="colorlib-aside">
+        <div class="text-center">
+          <div class="author-img">
+            <img src="img/profile.jpg" alt="Profile Image">
+          </div>
+          <h1 id="colorlib-logo"><a href="#">Andres Felipe Perez Alonso</a></h1>
+        </div>
+        <nav id="colorlib-main-menu">
+          <ul>
+            <li><a href="#" data-nav-section="about">About</a></li>
+            <li><a href="#" data-nav-section="skills">Skills</a></li>
+            <li><a href="#" data-nav-section="experience">Experience</a></li>
+            <li><a href="#" data-nav-section="education">Education</a></li>
+            <li><a href="#" data-nav-section="contact">Contact</a></li>
+          </ul>
+        </nav>
+      </aside>
+      <div id="colorlib-main">
+        <section id="about"><h2>About</h2><div id="bio"></div></section>
+        <section id="skills"><h2>Skills</h2><div id="skills"></div></section>
+        <section id="experience"><h2>Experience</h2><div id="experience"></div></section>
+        <section id="education"><h2>Education</h2><div id="education"></div></section>
+        <section id="contact"><h2>Contact</h2><footer id="footer"></footer></section>
+      </div>
+    </div>
   </body>
 </html>
