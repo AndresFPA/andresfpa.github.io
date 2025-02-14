@@ -4,72 +4,27 @@ import {
   education,
   experience,
   footer,
-} from "./data.js";
+} from "../user-data/data.js";
 
-import { URLs } from "./urls.js";
+import { URLs } from "../user-data/urls.js";
 
-const { gitConnected, gitRepo } = URLs;
+const { gitRepo } = URLs;
 
-function populateBio(items, id) {
-  const bioTag = document.getElementById(id);
-  items.forEach((bioItem) => {
-    const p = document.createElement("p");
-    p.innerHTML = bioItem;
-    bioTag.append(p);
-  });
-}
-
-function populateSkills(items, id) {
-  const skillsTag = document.getElementById(id);
+function populateSection(items, id) {
+  const sectionTag = document.getElementById(id);
   items.forEach((item) => {
-    const li = document.createElement("li");
-    li.innerHTML = item;
-    skillsTag.append(li);
-  });
-}
-
-function populateExperience(items, id) {
-  const experienceTag = document.getElementById(id);
-  items.forEach((exp) => {
     const div = document.createElement("div");
-    div.innerHTML = `<h2>${exp.title}</h2><p>${exp.duration}</p><p>${exp.subtitle}</p>`;
-    exp.details.forEach((detail) => {
+    div.innerHTML = `<h2>${item.title}</h2><p>${item.duration}</p><p>${item.subtitle}</p>`;
+    item.details.forEach((detail) => {
       const p = document.createElement("p");
       p.innerHTML = `&bullet; ${detail}`;
       div.append(p);
     });
-    experienceTag.append(div);
+    sectionTag.append(div);
   });
 }
 
-function populateEducation(items, id) {
-  const educationTag = document.getElementById(id);
-  items.forEach((edu) => {
-    const div = document.createElement("div");
-    div.innerHTML = `<h2>${edu.title}</h2><p>${edu.duration}</p><p>${edu.subtitle}</p>`;
-    educationTag.append(div);
-  });
-}
-
-function populateFooter(items, id) {
-  const footerTag = document.getElementById(id);
-  items.forEach((section) => {
-    const div = document.createElement("div");
-    div.innerHTML = `<h3>${section.label}</h3>`;
-    section.data.forEach((link) => {
-      const a = document.createElement("a");
-      a.href = link.link;
-      a.target = "_blank";
-      a.innerHTML = link.text;
-      div.append(a);
-      div.append(document.createElement("br"));
-    });
-    footerTag.append(div);
-  });
-}
-
-populateBio(bio, "bio");
-populateSkills(skills, "skills");
-populateExperience(experience, "experience");
-populateEducation(education, "education");
-populateFooter(footer, "footer");
+populateSection(bio, "bio");
+populateSection(skills, "skills");
+populateSection(experience, "experience");
+populateSection(education, "education");

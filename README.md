@@ -1,6 +1,6 @@
 # Portfolio of Andres Felipe Perez Alonso
 
-This is the personal website showcasing my research in **Applied Statistics** and **Quantitative Psychology**.
+This is a personal portfolio showcasing my research in **Applied Statistics** and **Quantitative Psychology**.
 
 ## Technologies Used:
 - HTML, CSS, JavaScript
