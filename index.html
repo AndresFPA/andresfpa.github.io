@@ -69,7 +69,7 @@
             <!-- Placeholder for Profile Image -->
             <div class="md:w-1/3 flex justify-center">
                 <div class="w-48 h-48 md:w-64 md:h-64 rounded-full bg-white/20 backdrop-blur-sm border-4 border-white/30 flex items-center justify-center overflow-hidden shadow-xl">
-                    <img src="profile.jpg" alt="Profile" class="w-full h-full object-cover">
+                    <img src="profile.jpg" alt="Andrés Felipe Pérez Alonso" class="w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'fas fa-user-graduate text-6xl text-blue-100\'></i>'">
                 </div>
             </div>
         </div>
@@ -103,11 +103,11 @@
             </div>
         </section>
 
-        <!-- Experience & Education -->
+        <!-- Experience -->
         <section id="experience" class="mb-20 scroll-mt-24">
             <div class="flex items-center mb-8">
                 <div class="h-1 w-12 bg-blue-800 mr-4"></div>
-                <h2 class="text-3xl font-bold text-slate-900">Experience & Education</h2>
+                <h2 class="text-3xl font-bold text-slate-900">Experience</h2>
             </div>
             
             <div class="space-y-8">
@@ -149,6 +149,61 @@
             </div>
         </section>
 
+        <!-- Education Section -->
+        <section id="education" class="mb-20 scroll-mt-24">
+            <div class="flex items-center mb-8">
+                <div class="h-1 w-12 bg-blue-800 mr-4"></div>
+                <h2 class="text-3xl font-bold text-slate-900">Education</h2>
+            </div>
+            
+            <div class="relative border-l-2 border-blue-100 ml-3 space-y-10">
+                <!-- PhD -->
+                <div class="ml-6 relative">
+                    <div class="absolute -left-[31px] bg-blue-600 h-4 w-4 rounded-full border-4 border-white"></div>
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-start">
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900">PhD in Methodology and Statistics</h3>
+                                <p class="text-blue-700 font-medium">Tilburg University</p>
+                                <p class="text-slate-500 text-sm mt-1">Department of Methodology and Statistics</p>
+                            </div>
+                            <span class="mt-2 md:mt-0 px-3 py-1 bg-slate-100 text-slate-600 rounded text-sm font-medium">2021 - 2025</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Master's -->
+                <div class="ml-6 relative">
+                    <div class="absolute -left-[31px] bg-blue-300 h-4 w-4 rounded-full border-4 border-white"></div>
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-start">
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900">Master of Science (Cum Laude)</h3>
+                                <p class="text-blue-700 font-medium">Leiden University</p>
+                                <p class="text-slate-500 text-sm mt-1">Methodology and Statistcs</p>
+                            </div>
+                            <span class="mt-2 md:mt-0 px-3 py-1 bg-slate-100 text-slate-600 rounded text-sm font-medium">2020 - 2021</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bachelor's -->
+                <div class="ml-6 relative">
+                    <div class="absolute -left-[31px] bg-blue-200 h-4 w-4 rounded-full border-4 border-white"></div>
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-start">
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900">Bachelor of Science</h3>
+                                <p class="text-blue-700 font-medium">Universidad Nacional de Colombia</p>
+                                <p class="text-slate-500 text-sm mt-1">Psychology</p>
+                            </div>
+                            <span class="mt-2 md:mt-0 px-3 py-1 bg-slate-100 text-slate-600 rounded text-sm font-medium">2014 - 2019</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Publications Section -->
         <section id="publications" class="mb-20 scroll-mt-24">
             <div class="flex items-center mb-8">
@@ -184,7 +239,7 @@
                 <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 transition hover:shadow-lg hover:border-emerald-200">
                     <div class="flex flex-col md:flex-row justify-between md:items-start gap-4">
                         <div class="flex-1">
-                            <span class="inline-block px-2 py-1 bg-emerald-50 text-emerald-700 text-xs font-bold uppercase tracking-wide rounded mb-2">Methodology (2025)</span>
+                            <span class="inline-block px-2 py-1 bg-blue-50 text-blue-700 text-xs font-bold uppercase tracking-wide rounded mb-2">Methodology (2025)</span>
                             <h3 class="text-lg font-bold text-slate-900 leading-tight">Selecting the Number of Clusters in Mixture Multigroup Structural Equation Modeling</h3>
                             <p class="text-slate-500 text-sm mt-2 italic">
                                 Pérez Alonso, A. F., Vermunt, J. K., Rosseel, Y., & De Roover, K.
@@ -206,7 +261,7 @@
                 <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 transition hover:shadow-lg hover:border-purple-200">
                     <div class="flex flex-col md:flex-row justify-between md:items-start gap-4">
                         <div class="flex-1">
-                            <span class="inline-block px-2 py-1 bg-purple-50 text-purple-700 text-xs font-bold uppercase tracking-wide rounded mb-2">Multivariate Behavioral Research (2024)</span>
+                            <span class="inline-block px-2 py-1 bg-blue-50 text-blue-700 text-xs font-bold uppercase tracking-wide rounded mb-2">Multivariate Behavioral Research (2024)</span>
                             <h3 class="text-lg font-bold text-slate-900 leading-tight">Beyond Pearson's Correlation: Modern Nonparametric Independence Tests for Psychological Research</h3>
                             <p class="text-slate-500 text-sm mt-2 italic">
                                 Karch, J. D., Pérez Alonso, A. F., & Bergsma, W. P.
@@ -228,7 +283,7 @@
                 <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 transition hover:shadow-lg hover:border-red-200">
                     <div class="flex flex-col md:flex-row justify-between md:items-start gap-4">
                         <div class="flex-1">
-                            <span class="inline-block px-2 py-1 bg-red-50 text-red-700 text-xs font-bold uppercase tracking-wide rounded mb-2">Heart & Lung (2025)</span>
+                            <span class="inline-block px-2 py-1 bg-blue-50 text-blue-700 text-xs font-bold uppercase tracking-wide rounded mb-2">Heart & Lung (2025)</span>
                             <h3 class="text-lg font-bold text-slate-900 leading-tight">Modifiable Risk Factors and Motivation for Lifestyle Change of CVD Patients Starting Cardiac Rehabilitation: The BENEFIT Study</h3>
                             <p class="text-slate-500 text-sm mt-2 italic">
                                 Breeman, L., ... Perez Alonso, A. F., et al.
