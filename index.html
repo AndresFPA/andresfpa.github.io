@@ -50,6 +50,8 @@
                 <div class="flex items-center">
                     <span class="text-xl font-bold text-slate-900 dark:text-white">A.F. Pérez Alonso</span>
                 </div>
+                
+                <!-- Desktop Menu -->
                 <div class="hidden sm:flex items-center space-x-8">
                     <a href="#about" class="text-slate-600 dark:text-slate-300 hover:text-blue-900 dark:hover:text-blue-400 px-3 py-2 text-sm font-medium transition">About</a>
                     <a href="#experience" class="text-slate-600 dark:text-slate-300 hover:text-blue-900 dark:hover:text-blue-400 px-3 py-2 text-sm font-medium transition">Experience</a>
@@ -57,18 +59,36 @@
                     <a href="#publications" class="text-slate-600 dark:text-slate-300 hover:text-blue-900 dark:hover:text-blue-400 px-3 py-2 text-sm font-medium transition">Publications</a>
                     <a href="#contact" class="text-slate-600 dark:text-slate-300 hover:text-blue-900 dark:hover:text-blue-400 px-3 py-2 text-sm font-medium transition">Contact</a>
                     
-                    <!-- Dark Mode Toggle Button -->
+                    <!-- Dark Mode Toggle Button (Desktop) -->
                     <button id="theme-toggle" class="text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 p-2 rounded-lg transition-colors focus:outline-none" aria-label="Toggle Dark Mode">
                         <i class="fas fa-sun hidden dark:block"></i>
                         <i class="fas fa-moon block dark:hidden"></i>
                     </button>
                 </div>
-                <!-- Mobile menu button placeholder -->
-                <div class="flex items-center sm:hidden">
-                    <button class="text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 focus:outline-none p-2">
-                        <i class="fas fa-bars"></i>
+
+                <!-- Mobile Menu Button -->
+                <div class="flex items-center sm:hidden gap-4">
+                     <!-- Dark Mode Toggle Button (Mobile) -->
+                     <button id="theme-toggle-mobile" class="text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 p-2 rounded-lg transition-colors focus:outline-none" aria-label="Toggle Dark Mode">
+                        <i class="fas fa-sun hidden dark:block"></i>
+                        <i class="fas fa-moon block dark:hidden"></i>
+                    </button>
+
+                    <button id="mobile-menu-button" class="text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 focus:outline-none p-2">
+                        <i class="fas fa-bars text-xl"></i>
                     </button>
                 </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden sm:hidden bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
+            <div class="px-2 pt-2 pb-3 space-y-1 shadow-lg">
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-200 hover:text-blue-900 hover:bg-slate-50 dark:hover:bg-slate-800 transition">About</a>
+                <a href="#experience" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-200 hover:text-blue-900 hover:bg-slate-50 dark:hover:bg-slate-800 transition">Experience</a>
+                <a href="#education" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-200 hover:text-blue-900 hover:bg-slate-50 dark:hover:bg-slate-800 transition">Education</a>
+                <a href="#publications" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-200 hover:text-blue-900 hover:bg-slate-50 dark:hover:bg-slate-800 transition">Publications</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-200 hover:text-blue-900 hover:bg-slate-50 dark:hover:bg-slate-800 transition">Contact</a>
             </div>
         </div>
     </nav>
@@ -388,18 +408,32 @@
         });
 
         // Dark Mode Toggle Logic
-        const themeToggleBtn = document.getElementById('theme-toggle');
-        
-        themeToggleBtn.addEventListener('click', function() {
-            // If dark mode is active
-            if (document.documentElement.classList.contains('dark')) {
+        const toggleTheme = () => {
+             if (document.documentElement.classList.contains('dark')) {
                 document.documentElement.classList.remove('dark');
                 localStorage.theme = 'light';
             } else {
                 document.documentElement.classList.add('dark');
                 localStorage.theme = 'dark';
             }
-        });
+        };
+
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        if(themeToggleBtn) themeToggleBtn.addEventListener('click', toggleTheme);
+
+        const themeToggleBtnMobile = document.getElementById('theme-toggle-mobile');
+        if(themeToggleBtnMobile) themeToggleBtnMobile.addEventListener('click', toggleTheme);
+
+
+        // Mobile menu toggle
+        const mobileBtn = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileBtn && mobileMenu) {
+            mobileBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
     </script>
 </body>
 </html>
