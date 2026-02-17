@@ -30,8 +30,14 @@
             font-family: 'Playfair Display', serif;
         }
 
+        /* Default Light Mode Gradient */
         .gradient-bg {
             background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+        }
+
+        /* Dark Mode Gradient Override - Darker Black/Blue */
+        .dark .gradient-bg {
+            background: linear-gradient(135deg, #020617 0%, #172554 100%);
         }
     </style>
 </head>
@@ -67,10 +73,11 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero Section (Updated size and padding) -->
     <header class="gradient-bg text-white">
-        <div class="max-w-5xl mx-auto px-4 py-20 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center">
-            <div class="md:w-2/3 mb-10 md:mb-0">
+        <!-- Reduced py-20 to py-12 for a smaller banner -->
+        <div class="max-w-5xl mx-auto px-4 py-12 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center">
+            <div class="md:w-2/3 mb-8 md:mb-0">
                 <h1 class="text-4xl md:text-5xl font-bold mb-4 leading-tight">
                     Andrés Felipe Pérez Alonso
                 </h1>
@@ -89,9 +96,10 @@
                     </a>
                 </div>
             </div>
-            <!-- Profile Image -->
+            <!-- Profile Image (Updated size) -->
             <div class="md:w-1/3 flex justify-center">
-                <div class="w-48 h-48 md:w-64 md:h-64 rounded-full bg-white/20 backdrop-blur-sm border-4 border-white/30 flex items-center justify-center overflow-hidden shadow-xl">
+                <!-- Reduced w-48/h-48 (mobile) to w-40/h-40, and md:w-64/h-64 (desktop) to md:w-48/h-48 -->
+                <div class="w-40 h-40 md:w-48 md:h-48 rounded-full bg-white/20 backdrop-blur-sm border-4 border-white/30 flex items-center justify-center overflow-hidden shadow-xl">
                     <img src="profile.jpg" alt="Andrés Felipe Pérez Alonso" class="w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'fas fa-user-graduate text-6xl text-blue-100\'></i>'">
                 </div>
             </div>
