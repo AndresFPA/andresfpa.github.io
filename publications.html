@@ -81,9 +81,14 @@
         <section id="publications" class="mb-20">
             <div class="space-y-6">
                 
-                <!-- Paper 1 -->
-                <div class="bg-white dark:bg-slate-900 p-6 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 transition hover:shadow-lg hover:border-blue-200 dark:hover:border-blue-700">
-                    <div class="flex flex-col md:flex-row justify-between md:items-start gap-4">
+                <!-- Paper 1 (Featured / Starred) -->
+                <div class="bg-white dark:bg-slate-900 p-6 rounded-xl shadow-md border-2 border-yellow-400 dark:border-yellow-600 transition hover:shadow-lg relative overflow-hidden">
+                    <!-- Star Badge -->
+                    <div class="absolute top-0 right-0 bg-yellow-400 dark:bg-yellow-600 text-yellow-900 dark:text-yellow-50 text-xs font-bold px-3 py-1 rounded-bl-lg">
+                        <i class="fas fa-star mr-1"></i> Selected
+                    </div>
+                    
+                    <div class="flex flex-col md:flex-row justify-between md:items-start gap-4 mt-2">
                         <div class="flex-1">
                             <span class="inline-block px-2 py-1 bg-blue-50 dark:bg-blue-900/50 text-blue-700 dark:text-blue-200 text-xs font-bold uppercase tracking-wide rounded mb-2">Psychological Methods (2024)</span>
                             <h3 class="text-lg font-bold text-slate-900 dark:text-white leading-tight">Mixture Multigroup Structural Equation Modeling: A Novel Method for Comparing Structural Relations Across Many Groups</h3>
@@ -103,7 +108,7 @@
                     </div>
                 </div>
 
-                <!-- Paper 2 -->
+                <!-- Paper 2 (2025) -->
                 <div class="bg-white dark:bg-slate-900 p-6 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 transition hover:shadow-lg hover:border-emerald-200 dark:hover:border-emerald-700">
                     <div class="flex flex-col md:flex-row justify-between md:items-start gap-4">
                         <div class="flex-1">
@@ -125,7 +130,26 @@
                     </div>
                 </div>
 
-                <!-- Paper 3 -->
+                <!-- Paper 3 (2025 - Moved Up) -->
+                <div class="bg-white dark:bg-slate-900 p-6 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 transition hover:shadow-lg hover:border-red-200 dark:hover:border-red-700">
+                    <div class="flex flex-col md:flex-row justify-between md:items-start gap-4">
+                        <div class="flex-1">
+                            <span class="inline-block px-2 py-1 bg-red-50 dark:bg-red-900/50 text-red-700 dark:text-red-200 text-xs font-bold uppercase tracking-wide rounded mb-2">Heart & Lung (2025)</span>
+                            <h3 class="text-lg font-bold text-slate-900 dark:text-white leading-tight">Modifiable Risk Factors and Motivation for Lifestyle Change of CVD Patients Starting Cardiac Rehabilitation: The BENEFIT Study</h3>
+                            <p class="text-slate-500 dark:text-slate-400 text-sm mt-2 italic">
+                                Breeman, L., ... Pérez Alonso, A. F., et al.
+                            </p>
+                        </div>
+                        <div class="md:w-32 flex-shrink-0">
+                            <a href="https://doi.org/10.1016/j.hrtlng.2024.09.008" target="_blank" class="flex items-center justify-center w-full px-4 py-2 bg-slate-100 dark:bg-slate-800 hover:bg-red-600 hover:text-white dark:hover:bg-red-600 text-slate-700 dark:text-slate-300 text-sm font-semibold rounded-lg transition group">
+                                <span>Read Paper</span>
+                                <i class="fas fa-external-link-alt ml-2 text-xs opacity-50 group-hover:opacity-100"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Paper 4 (2024) -->
                 <div class="bg-white dark:bg-slate-900 p-6 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 transition hover:shadow-lg hover:border-purple-200 dark:hover:border-purple-700">
                     <div class="flex flex-col md:flex-row justify-between md:items-start gap-4">
                         <div class="flex-1">
@@ -140,25 +164,6 @@
                         </div>
                         <div class="md:w-32 flex-shrink-0">
                             <a href="https://doi.org/10.1080/00273171.2024.2347960" target="_blank" class="flex items-center justify-center w-full px-4 py-2 bg-slate-100 dark:bg-slate-800 hover:bg-purple-600 hover:text-white dark:hover:bg-purple-600 text-slate-700 dark:text-slate-300 text-sm font-semibold rounded-lg transition group">
-                                <span>Read Paper</span>
-                                <i class="fas fa-external-link-alt ml-2 text-xs opacity-50 group-hover:opacity-100"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Paper 4 -->
-                <div class="bg-white dark:bg-slate-900 p-6 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 transition hover:shadow-lg hover:border-red-200 dark:hover:border-red-700">
-                    <div class="flex flex-col md:flex-row justify-between md:items-start gap-4">
-                        <div class="flex-1">
-                            <span class="inline-block px-2 py-1 bg-red-50 dark:bg-red-900/50 text-red-700 dark:text-red-200 text-xs font-bold uppercase tracking-wide rounded mb-2">Heart & Lung (2025)</span>
-                            <h3 class="text-lg font-bold text-slate-900 dark:text-white leading-tight">Modifiable Risk Factors and Motivation for Lifestyle Change of CVD Patients Starting Cardiac Rehabilitation: The BENEFIT Study</h3>
-                            <p class="text-slate-500 dark:text-slate-400 text-sm mt-2 italic">
-                                Breeman, L., ... Pérez Alonso, A. F., et al.
-                            </p>
-                        </div>
-                        <div class="md:w-32 flex-shrink-0">
-                            <a href="https://doi.org/10.1016/j.hrtlng.2024.09.008" target="_blank" class="flex items-center justify-center w-full px-4 py-2 bg-slate-100 dark:bg-slate-800 hover:bg-red-600 hover:text-white dark:hover:bg-red-600 text-slate-700 dark:text-slate-300 text-sm font-semibold rounded-lg transition group">
                                 <span>Read Paper</span>
                                 <i class="fas fa-external-link-alt ml-2 text-xs opacity-50 group-hover:opacity-100"></i>
                             </a>
