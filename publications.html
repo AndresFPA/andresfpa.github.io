@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications | Andrés Felipe Pérez Alonso</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { darkMode: 'class', }
+    </script>
+    <script>
+        if (localStorage.theme === 'light') { document.documentElement.classList.remove('dark') } 
+        else { document.documentElement.classList.add('dark') }
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        .gradient-bg { background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%); }
+        .dark .gradient-bg { background: linear-gradient(135deg, #020617 0%, #172554 100%); }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-200 transition-colors duration-300">
+
+    <!-- Navigation -->
+    <nav class="bg-white dark:bg-slate-900 shadow-sm sticky top-0 z-50 border-b border-transparent dark:border-slate-800 transition-colors duration-300">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-xl font-bold text-slate-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-400 transition">A.F. Pérez Alonso</a>
+                </div>
+                <!-- Desktop Menu -->
+                <div class="hidden sm:flex items-center space-x-8">
+                    <a href="index.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-900 dark:hover:text-blue-400 px-3 py-2 text-sm font-medium transition">About</a>
+                    <a href="experience.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-900 dark:hover:text-blue-400 px-3 py-2 text-sm font-medium transition">Experience & Education</a>
+                    <a href="publications.html" class="text-blue-700 dark:text-blue-400 font-bold px-3 py-2 text-sm transition border-b-2 border-blue-700 dark:border-blue-400">Publications</a>
+                    <a href="projects.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-900 dark:hover:text-blue-400 px-3 py-2 text-sm font-medium transition">Projects</a>
+                    <a href="#contact" class="text-slate-600 dark:text-slate-300 hover:text-blue-900 dark:hover:text-blue-400 px-3 py-2 text-sm font-medium transition">Contact</a>
+                    
+                    <button id="theme-toggle" class="text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 p-2 rounded-lg transition-colors focus:outline-none">
+                        <i class="fas fa-sun hidden dark:block"></i>
+                        <i class="fas fa-moon block dark:hidden"></i>
+                    </button>
+                </div>
+                <!-- Mobile Menu Button -->
+                <div class="flex items-center sm:hidden gap-4">
+                     <button id="theme-toggle-mobile" class="text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 p-2 rounded-lg transition-colors focus:outline-none">
+                        <i class="fas fa-sun hidden dark:block"></i><i class="fas fa-moon block dark:hidden"></i>
+                    </button>
+                    <button id="mobile-menu-button" class="text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 focus:outline-none p-2">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden) -->
+        <div id="mobile-menu" class="hidden sm:hidden bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
+            <div class="px-2 pt-2 pb-3 space-y-1 shadow-lg">
+                <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-200 hover:text-blue-900 hover:bg-slate-50 dark:hover:bg-slate-800 transition">About</a>
+                <a href="experience.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-200 hover:text-blue-900 hover:bg-slate-50 dark:hover:bg-slate-800 transition">Experience & Education</a>
+                <a href="publications.html" class="block px-3 py-2 rounded-md text-base font-medium text-blue-700 dark:text-blue-400 bg-blue-50 dark:bg-slate-800 transition">Publications</a>
+                <a href="projects.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-200 hover:text-blue-900 hover:bg-slate-50 dark:hover:bg-slate-800 transition">Projects</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-200 hover:text-blue-900 hover:bg-slate-50 dark:hover:bg-slate-800 transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Subpage Header -->
+    <header class="gradient-bg text-white py-12">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-4xl font-bold">Publications</h1>
+            <p class="text-blue-100 mt-2 font-light text-lg">A complete list of my peer-reviewed academic work.</p>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 min-h-[50vh]">
+
+        <!-- Publications Section -->
+        <section id="publications" class="mb-20">
+            <div class="space-y-6">
+                
+                <!-- Paper 1 -->
+                <div class="bg-white dark:bg-slate-900 p-6 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 transition hover:shadow-lg hover:border-blue-200 dark:hover:border-blue-700">
+                    <div class="flex flex-col md:flex-row justify-between md:items-start gap-4">
+                        <div class="flex-1">
+                            <span class="inline-block px-2 py-1 bg-blue-50 dark:bg-blue-900/50 text-blue-700 dark:text-blue-200 text-xs font-bold uppercase tracking-wide rounded mb-2">Psychological Methods (2024)</span>
+                            <h3 class="text-lg font-bold text-slate-900 dark:text-white leading-tight">Mixture Multigroup Structural Equation Modeling: A Novel Method for Comparing Structural Relations Across Many Groups</h3>
+                            <p class="text-slate-500 dark:text-slate-400 text-sm mt-2 italic">
+                                Pérez Alonso, A. F., Rosseel, Y., Vermunt, J. K., & De Roover, K.
+                            </p>
+                            <p class="text-slate-600 dark:text-slate-300 mt-3 text-sm">
+                                We propose a new method that allows researchers to find clusters of groups sharing the same structural relations, disentangling these differences from measurement differences.
+                            </p>
+                        </div>
+                        <div class="md:w-32 flex-shrink-0">
+                            <a href="https://doi.org/10.1037/met0000667" target="_blank" class="flex items-center justify-center w-full px-4 py-2 bg-slate-100 dark:bg-slate-800 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-600 text-slate-700 dark:text-slate-300 text-sm font-semibold rounded-lg transition group">
+                                <span>Read Paper</span>
+                                <i class="fas fa-external-link-alt ml-2 text-xs opacity-50 group-hover:opacity-100"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Paper 2 -->
+                <div class="bg-white dark:bg-slate-900 p-6 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 transition hover:shadow-lg hover:border-emerald-200 dark:hover:border-emerald-700">
+                    <div class="flex flex-col md:flex-row justify-between md:items-start gap-4">
+                        <div class="flex-1">
+                            <span class="inline-block px-2 py-1 bg-emerald-50 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-200 text-xs font-bold uppercase tracking-wide rounded mb-2">Methodology (2025)</span>
+                            <h3 class="text-lg font-bold text-slate-900 dark:text-white leading-tight">Selecting the Number of Clusters in Mixture Multigroup Structural Equation Modeling</h3>
+                            <p class="text-slate-500 dark:text-slate-400 text-sm mt-2 italic">
+                                Pérez Alonso, A. F., Vermunt, J. K., Rosseel, Y., & De Roover, K.
+                            </p>
+                            <p class="text-slate-600 dark:text-slate-300 mt-3 text-sm">
+                                Investigates optimal model selection criteria (AIC, BIC, etc.) for determining the correct number of clusters in MixMG-SEM applications.
+                            </p>
+                        </div>
+                        <div class="md:w-32 flex-shrink-0">
+                            <a href="https://doi.org/10.5964/meth.14931" target="_blank" class="flex items-center justify-center w-full px-4 py-2 bg-slate-100 dark:bg-slate-800 hover:bg-emerald-600 hover:text-white dark:hover:bg-emerald-600 text-slate-700 dark:text-slate-300 text-sm font-semibold rounded-lg transition group">
+                                <span>Read Paper</span>
+                                <i class="fas fa-external-link-alt ml-2 text-xs opacity-50 group-hover:opacity-100"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Paper 3 -->
+                <div class="bg-white dark:bg-slate-900 p-6 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 transition hover:shadow-lg hover:border-purple-200 dark:hover:border-purple-700">
+                    <div class="flex flex-col md:flex-row justify-between md:items-start gap-4">
+                        <div class="flex-1">
+                            <span class="inline-block px-2 py-1 bg-purple-50 dark:bg-purple-900/50 text-purple-700 dark:text-purple-200 text-xs font-bold uppercase tracking-wide rounded mb-2">Multivariate Behavioral Research (2024)</span>
+                            <h3 class="text-lg font-bold text-slate-900 dark:text-white leading-tight">Beyond Pearson's Correlation: Modern Nonparametric Independence Tests for Psychological Research</h3>
+                            <p class="text-slate-500 dark:text-slate-400 text-sm mt-2 italic">
+                                Karch, J. D., Pérez Alonso, A. F., & Bergsma, W. P.
+                            </p>
+                            <p class="text-slate-600 dark:text-slate-300 mt-3 text-sm">
+                                An exploration of modern nonparametric tests that offer robust alternatives to traditional correlation metrics in psychological data analysis.
+                            </p>
+                        </div>
+                        <div class="md:w-32 flex-shrink-0">
+                            <a href="https://doi.org/10.1080/00273171.2024.2347960" target="_blank" class="flex items-center justify-center w-full px-4 py-2 bg-slate-100 dark:bg-slate-800 hover:bg-purple-600 hover:text-white dark:hover:bg-purple-600 text-slate-700 dark:text-slate-300 text-sm font-semibold rounded-lg transition group">
+                                <span>Read Paper</span>
+                                <i class="fas fa-external-link-alt ml-2 text-xs opacity-50 group-hover:opacity-100"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Paper 4 -->
+                <div class="bg-white dark:bg-slate-900 p-6 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 transition hover:shadow-lg hover:border-red-200 dark:hover:border-red-700">
+                    <div class="flex flex-col md:flex-row justify-between md:items-start gap-4">
+                        <div class="flex-1">
+                            <span class="inline-block px-2 py-1 bg-red-50 dark:bg-red-900/50 text-red-700 dark:text-red-200 text-xs font-bold uppercase tracking-wide rounded mb-2">Heart & Lung (2025)</span>
+                            <h3 class="text-lg font-bold text-slate-900 dark:text-white leading-tight">Modifiable Risk Factors and Motivation for Lifestyle Change of CVD Patients Starting Cardiac Rehabilitation: The BENEFIT Study</h3>
+                            <p class="text-slate-500 dark:text-slate-400 text-sm mt-2 italic">
+                                Breeman, L., ... Pérez Alonso, A. F., et al.
+                            </p>
+                        </div>
+                        <div class="md:w-32 flex-shrink-0">
+                            <a href="https://doi.org/10.1016/j.hrtlng.2024.09.008" target="_blank" class="flex items-center justify-center w-full px-4 py-2 bg-slate-100 dark:bg-slate-800 hover:bg-red-600 hover:text-white dark:hover:bg-red-600 text-slate-700 dark:text-slate-300 text-sm font-semibold rounded-lg transition group">
+                                <span>Read Paper</span>
+                                <i class="fas fa-external-link-alt ml-2 text-xs opacity-50 group-hover:opacity-100"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="scroll-mt-24">
+            <div class="bg-slate-900 dark:bg-slate-800 rounded-2xl p-8 md:p-12 text-center text-white relative overflow-hidden border border-slate-800 dark:border-slate-700 shadow-xl">
+                <div class="relative z-10">
+                    <h2 class="text-3xl font-bold mb-4 font-serif">Let's Connect</h2>
+                    <p class="text-slate-300 mb-8 max-w-2xl mx-auto">
+                        I am open to collaborations on statistical methodology, mixture modeling, psychometrics, and structural equation modeling.
+                    </p>
+                    <div class="flex flex-col sm:flex-row justify-center gap-4 flex-wrap">
+                        <a href="mailto:andresfelipe.perezalonso@kuleuven.be" class="bg-white text-slate-900 hover:bg-slate-100 px-8 py-3 rounded-lg font-semibold transition">
+                            <i class="fas fa-envelope mr-2"></i> Email Me
+                        </a>
+                        <a href="https://linkedin.com/in/andresperez96" target="_blank" class="bg-blue-700 hover:bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold transition">
+                            <i class="fab fa-linkedin mr-2"></i> LinkedIn
+                        </a>
+                        <a href="https://github.com/AndresFPA" target="_blank" class="bg-gray-800 hover:bg-gray-700 text-white px-8 py-3 rounded-lg font-semibold transition border border-gray-700">
+                            <i class="fab fa-github mr-2"></i> GitHub
+                        </a>
+                        <a href="https://www.kuleuven.be/wieiswie/en/person/u0159267" target="_blank" class="bg-transparent border border-slate-600 hover:bg-slate-800 text-white px-8 py-3 rounded-lg font-semibold transition">
+                            KU Leuven Profile
+                        </a>
+                    </div>
+                </div>
+                <div class="absolute top-0 left-0 -ml-20 -mt-20 w-64 h-64 rounded-full bg-blue-900 opacity-20 blur-3xl"></div>
+                <div class="absolute bottom-0 right-0 -mr-20 -mb-20 w-64 h-64 rounded-full bg-blue-500 opacity-10 blur-3xl"></div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 mt-20 py-12 transition-colors duration-300">
+        <div class="max-w-5xl mx-auto px-4 text-center">
+            <p class="text-slate-500 dark:text-slate-400">© 2026 Andrés Felipe Pérez Alonso. Academic Portfolio.</p>
+            <p class="text-slate-400 dark:text-slate-500 text-sm mt-2">Built with HTML & Tailwind CSS. Hosted on GitHub Pages.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        const toggleTheme = () => {
+             if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.theme = 'light';
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.theme = 'dark';
+            }
+        };
+
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        if(themeToggleBtn) themeToggleBtn.addEventListener('click', toggleTheme);
+
+        const themeToggleBtnMobile = document.getElementById('theme-toggle-mobile');
+        if(themeToggleBtnMobile) themeToggleBtnMobile.addEventListener('click', toggleTheme);
+
+        const mobileBtn = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileBtn && mobileMenu) {
+            mobileBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
+        }
+    </script>
+</body>
+</html>
