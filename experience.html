@@ -3,42 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Andrés Felipe Pérez Alonso | Quantitative Psychology</title>
+    <title>Experience & Education | Andrés Felipe Pérez Alonso</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        tailwind.config = {
-            darkMode: 'class',
-        }
+        tailwind.config = { darkMode: 'class', }
     </script>
     <script>
-        // Check local storage for theme preference, default to 'dark' if not set
-        if (localStorage.theme === 'light') {
-            document.documentElement.classList.remove('dark')
-        } else {
-            document.documentElement.classList.add('dark')
-        }
+        if (localStorage.theme === 'light') { document.documentElement.classList.remove('dark') } 
+        else { document.documentElement.classList.add('dark') }
     </script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap');
-        
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        
-        h1, h2, h3 {
-            font-family: 'Playfair Display', serif;
-        }
-
-        /* Default Light Mode Gradient */
-        .gradient-bg {
-            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
-        }
-
-        /* Dark Mode Gradient Override - Darker Black/Blue */
-        .dark .gradient-bg {
-            background: linear-gradient(135deg, #020617 0%, #172554 100%);
-        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        .gradient-bg { background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%); }
+        .dark .gradient-bg { background: linear-gradient(135deg, #020617 0%, #172554 100%); }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-200 transition-colors duration-300">
@@ -50,30 +30,24 @@
                 <div class="flex items-center">
                     <a href="index.html" class="text-xl font-bold text-slate-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-400 transition">A.F. Pérez Alonso</a>
                 </div>
-                
                 <!-- Desktop Menu -->
                 <div class="hidden sm:flex items-center space-x-8">
-                    <a href="index.html" class="text-blue-700 dark:text-blue-400 font-bold px-3 py-2 text-sm transition border-b-2 border-blue-700 dark:border-blue-400">About</a>
-                    <a href="experience.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-900 dark:hover:text-blue-400 px-3 py-2 text-sm font-medium transition">Experience & Education</a>
+                    <a href="index.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-900 dark:hover:text-blue-400 px-3 py-2 text-sm font-medium transition">About</a>
+                    <a href="experience.html" class="text-blue-700 dark:text-blue-400 font-bold px-3 py-2 text-sm transition border-b-2 border-blue-700 dark:border-blue-400">Experience & Education</a>
                     <a href="publications.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-900 dark:hover:text-blue-400 px-3 py-2 text-sm font-medium transition">Publications</a>
                     <a href="projects.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-900 dark:hover:text-blue-400 px-3 py-2 text-sm font-medium transition">Projects</a>
                     <a href="#contact" class="text-slate-600 dark:text-slate-300 hover:text-blue-900 dark:hover:text-blue-400 px-3 py-2 text-sm font-medium transition">Contact</a>
                     
-                    <!-- Dark Mode Toggle Button (Desktop) -->
-                    <button id="theme-toggle" class="text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 p-2 rounded-lg transition-colors focus:outline-none" aria-label="Toggle Dark Mode">
+                    <button id="theme-toggle" class="text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 p-2 rounded-lg transition-colors focus:outline-none">
                         <i class="fas fa-sun hidden dark:block"></i>
                         <i class="fas fa-moon block dark:hidden"></i>
                     </button>
                 </div>
-
                 <!-- Mobile Menu Button -->
                 <div class="flex items-center sm:hidden gap-4">
-                     <!-- Dark Mode Toggle Button (Mobile) -->
-                     <button id="theme-toggle-mobile" class="text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 p-2 rounded-lg transition-colors focus:outline-none" aria-label="Toggle Dark Mode">
-                        <i class="fas fa-sun hidden dark:block"></i>
-                        <i class="fas fa-moon block dark:hidden"></i>
+                     <button id="theme-toggle-mobile" class="text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 p-2 rounded-lg transition-colors focus:outline-none">
+                        <i class="fas fa-sun hidden dark:block"></i><i class="fas fa-moon block dark:hidden"></i>
                     </button>
-
                     <button id="mobile-menu-button" class="text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 focus:outline-none p-2">
                         <i class="fas fa-bars text-xl"></i>
                     </button>
@@ -81,11 +55,11 @@
             </div>
         </div>
 
-        <!-- Mobile Menu (Hidden by default) -->
+        <!-- Mobile Menu (Hidden) -->
         <div id="mobile-menu" class="hidden sm:hidden bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
             <div class="px-2 pt-2 pb-3 space-y-1 shadow-lg">
-                <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-blue-700 dark:text-blue-400 bg-blue-50 dark:bg-slate-800 transition">About</a>
-                <a href="experience.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-200 hover:text-blue-900 hover:bg-slate-50 dark:hover:bg-slate-800 transition">Experience & Education</a>
+                <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-200 hover:text-blue-900 hover:bg-slate-50 dark:hover:bg-slate-800 transition">About</a>
+                <a href="experience.html" class="block px-3 py-2 rounded-md text-base font-medium text-blue-700 dark:text-blue-400 bg-blue-50 dark:bg-slate-800 transition">Experience & Education</a>
                 <a href="publications.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-200 hover:text-blue-900 hover:bg-slate-50 dark:hover:bg-slate-800 transition">Publications</a>
                 <a href="projects.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-200 hover:text-blue-900 hover:bg-slate-50 dark:hover:bg-slate-800 transition">Projects</a>
                 <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-200 hover:text-blue-900 hover:bg-slate-50 dark:hover:bg-slate-800 transition">Contact</a>
@@ -93,62 +67,120 @@
         </div>
     </nav>
 
-    <!-- Main Hero Banner -->
-    <header class="gradient-bg text-white">
-        <div class="max-w-5xl mx-auto px-4 py-12 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center">
-            <div class="md:w-2/3 mb-8 md:mb-0">
-                <h1 class="text-4xl md:text-5xl font-bold mb-4 leading-tight">
-                    Andrés Felipe Pérez Alonso
-                </h1>
-                <p class="text-xl md:text-2xl text-blue-100 font-light mb-8">
-                    Postdoctoral Researcher in Quantitative Psychology & Psychometrics at KU Leuven
-                </p>
-                <div class="flex flex-wrap gap-4">
-                    <a href="#contact" class="bg-white text-blue-900 hover:bg-blue-50 px-6 py-3 rounded-lg font-semibold transition shadow-lg">
-                        Get in Touch
-                    </a>
-                    <a href="https://linkedin.com/in/andresperez96" target="_blank" class="border border-white text-white hover:bg-white/10 px-6 py-3 rounded-lg font-semibold transition">
-                        <i class="fab fa-linkedin mr-2"></i> LinkedIn
-                    </a>
-                    <a href="https://github.com/AndresFPA" target="_blank" class="border border-white text-white hover:bg-white/10 px-6 py-3 rounded-lg font-semibold transition">
-                        <i class="fab fa-github mr-2"></i> GitHub
-                    </a>
-                </div>
-            </div>
-            <!-- Profile Image -->
-            <div class="md:w-1/3 flex justify-center">
-                <div class="w-40 h-40 md:w-48 md:h-48 rounded-full bg-white/20 backdrop-blur-sm border-4 border-white/30 flex items-center justify-center overflow-hidden shadow-xl">
-                    <img src="profile.jpg" alt="Andrés Felipe Pérez Alonso" class="w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'fas fa-user-graduate text-6xl text-blue-100\'></i>'">
-                </div>
-            </div>
+    <!-- Subpage Header -->
+    <header class="gradient-bg text-white py-12">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-4xl font-bold">Experience & Education</h1>
+            <p class="text-blue-100 mt-2 font-light text-lg">My academic background and professional journey.</p>
         </div>
     </header>
 
-    <!-- Main Content -->
     <main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 min-h-[50vh]">
 
-        <!-- About Section -->
-        <section id="about" class="mb-20 scroll-mt-24">
-            <div class="flex items-center mb-6">
+        <!-- Experience Section -->
+        <section id="experience" class="mb-20">
+            <div class="flex items-center mb-8">
                 <div class="h-1 w-12 bg-blue-800 dark:bg-blue-500 mr-4"></div>
-                <h2 class="text-3xl font-bold text-slate-900 dark:text-white">About Me</h2>
-            </div>
-            <div class="prose prose-lg text-slate-600 dark:text-slate-300 max-w-none">
-                <p class="mb-4">
-                    I am a Postdoctoral Researcher at the Research Unit for Quantitative Psychology and Individual Differences at <strong>KU Leuven</strong>. My academic research focuses on developing novel statistical methodologies for social and behavioral sciences.
-                </p>
-                <p>
-                    Specializing in <strong>Mixture Modeling</strong> and <strong>Structural Equation Modeling (SEM)</strong>, my research has focused on addressing how to (efficiently) compare structural relations across numerous groups using clustering techniques (more about this in my selected publications). My career path has also allowed me to interact with a diverse range of statistical methods, including predictive modeling, machine learning, large language models, simulation studies, among others.
-                </p>
+                <h2 class="text-3xl font-bold text-slate-900 dark:text-white">Experience</h2>
             </div>
             
-            <!-- Research Interests Tags -->
-            <div class="mt-8 flex flex-wrap gap-2">
-                <span class="px-4 py-2 bg-blue-100 dark:bg-blue-900/50 text-blue-800 dark:text-blue-200 rounded-full text-sm font-semibold border border-transparent dark:border-blue-800">Mixture Models</span>
-                <span class="px-4 py-2 bg-blue-100 dark:bg-blue-900/50 text-blue-800 dark:text-blue-200 rounded-full text-sm font-semibold border border-transparent dark:border-blue-800">Structural Equation Modeling</span>
-                <span class="px-4 py-2 bg-blue-100 dark:bg-blue-900/50 text-blue-800 dark:text-blue-200 rounded-full text-sm font-semibold border border-transparent dark:border-blue-800">Quantitative Psychology</span>
-                <span class="px-4 py-2 bg-blue-100 dark:bg-blue-900/50 text-blue-800 dark:text-blue-200 rounded-full text-sm font-semibold border border-transparent dark:border-blue-800">Psychometrics</span>
-                <span class="px-4 py-2 bg-blue-100 dark:bg-blue-900/50 text-blue-800 dark:text-blue-200 rounded-full text-sm font-semibold border border-transparent dark:border-blue-800">R Programming</span>
+            <div class="space-y-8">
+                <!-- Item 1: Postdoc -->
+                <div class="bg-white dark:bg-slate-900 p-6 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800 hover:shadow-md transition-all">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-start">
+                        <div class="md:pr-8">
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Postdoctoral Researcher</h3>
+                            <p class="text-blue-700 dark:text-blue-400 font-medium">KU Leuven</p>
+                            <p class="text-slate-600 dark:text-slate-300 text-justify mt-2">
+                                I am currently extending my doctoral research to develop a mixture-based SEM method for longitudinal panel data. This method addresses the challenge of comparing many groups by applying a clustering algorithm (i.e., mixture model) that not only finds subsets of similar groups but also explicitly models the temporal transitions and potential changes in cluster membership across time points.
+                            </p>
+                        </div>
+                        <span class="mt-2 md:mt-0 px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 rounded text-sm font-medium whitespace-nowrap flex-shrink-0">2025 - Present</span>
+                    </div>
+                </div>
+
+                <!-- Item 2: PhD -->
+                <div class="bg-white dark:bg-slate-900 p-6 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800 hover:shadow-md transition-all">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-start">
+                        <div class="md:pr-8">
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">PhD in Methodology and Statistics</h3>
+                            <p class="text-blue-700 dark:text-blue-400 font-medium">Tilburg University</p>
+                            <p class="text-slate-600 dark:text-slate-300 text-justify mt-2">
+                                At Tilburg University, I developed Mixture Multigroup SEM (MMG-SEM), a novel statistical method that integrates a clustering algorithm (i.e., mixture model) within the SEM framework.
+                            </p>
+                        </div>
+                        <span class="mt-2 md:mt-0 px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 rounded text-sm font-medium whitespace-nowrap flex-shrink-0">2021 - 2025</span>
+                    </div>
+                </div>
+
+                <!-- Item 3: Elsevier -->
+                <div class="bg-white dark:bg-slate-900 p-6 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800 hover:shadow-md transition-all">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-start">
+                        <div class="md:pr-8">
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Data Analyst</h3>
+                            <p class="text-blue-700 dark:text-blue-400 font-medium">Elsevier</p>
+                            <p class="text-slate-600 dark:text-slate-300 text-justify mt-2">
+                                Data handling and cleaning. Prepared the data before handing it over to the data science team.
+                            </p>
+                        </div>
+                        <span class="mt-2 md:mt-0 px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 rounded text-sm font-medium whitespace-nowrap flex-shrink-0">2021</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="mb-20">
+            <div class="flex items-center mb-8">
+                <div class="h-1 w-12 bg-blue-800 dark:bg-blue-500 mr-4"></div>
+                <h2 class="text-3xl font-bold text-slate-900 dark:text-white">Education</h2>
+            </div>
+            
+            <div class="relative border-l-2 border-blue-100 dark:border-slate-800 ml-3 space-y-10">
+                <!-- PhD -->
+                <div class="ml-6 relative">
+                    <div class="absolute -left-[31px] bg-blue-600 h-4 w-4 rounded-full border-4 border-white dark:border-slate-950"></div>
+                    <div class="bg-white dark:bg-slate-900 p-6 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800 hover:shadow-md transition-all">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-start">
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900 dark:text-white">PhD in Methodology and Statistics</h3>
+                                <p class="text-blue-700 dark:text-blue-400 font-medium">Tilburg University</p>
+                                <p class="text-slate-500 dark:text-slate-400 text-sm mt-1">Department of Methodology and Statistics</p>
+                            </div>
+                            <span class="mt-2 md:mt-0 px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 rounded text-sm font-medium whitespace-nowrap flex-shrink-0">2021 - 2025</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Master's -->
+                <div class="ml-6 relative">
+                    <div class="absolute -left-[31px] bg-blue-300 h-4 w-4 rounded-full border-4 border-white dark:border-slate-950"></div>
+                    <div class="bg-white dark:bg-slate-900 p-6 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800 hover:shadow-md transition-all">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-start">
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900 dark:text-white">Master of Science (Cum Laude)</h3>
+                                <p class="text-blue-700 dark:text-blue-400 font-medium">Leiden University</p>
+                                <p class="text-slate-500 dark:text-slate-400 text-sm mt-1">Methodology and Statistics</p>
+                            </div>
+                            <span class="mt-2 md:mt-0 px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 rounded text-sm font-medium whitespace-nowrap flex-shrink-0">2020 - 2021</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bachelor's -->
+                <div class="ml-6 relative">
+                    <div class="absolute -left-[31px] bg-blue-200 h-4 w-4 rounded-full border-4 border-white dark:border-slate-950"></div>
+                    <div class="bg-white dark:bg-slate-900 p-6 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800 hover:shadow-md transition-all">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-start">
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900 dark:text-white">Bachelor of Science</h3>
+                                <p class="text-blue-700 dark:text-blue-400 font-medium">Universidad Nacional de Colombia</p>
+                                <p class="text-slate-500 dark:text-slate-400 text-sm mt-1">Psychology</p>
+                            </div>
+                            <span class="mt-2 md:mt-0 px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 rounded text-sm font-medium whitespace-nowrap flex-shrink-0">2014 - 2019</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -175,7 +207,6 @@
                         </a>
                     </div>
                 </div>
-                <!-- Decorative background circle -->
                 <div class="absolute top-0 left-0 -ml-20 -mt-20 w-64 h-64 rounded-full bg-blue-900 opacity-20 blur-3xl"></div>
                 <div class="absolute bottom-0 right-0 -mr-20 -mb-20 w-64 h-64 rounded-full bg-blue-500 opacity-10 blur-3xl"></div>
             </div>
@@ -191,17 +222,13 @@
     </footer>
 
     <script>
-        // Simple smooth scrolling for internal links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
             });
         });
 
-        // Dark Mode Toggle Logic
         const toggleTheme = () => {
              if (document.documentElement.classList.contains('dark')) {
                 document.documentElement.classList.remove('dark');
@@ -218,14 +245,11 @@
         const themeToggleBtnMobile = document.getElementById('theme-toggle-mobile');
         if(themeToggleBtnMobile) themeToggleBtnMobile.addEventListener('click', toggleTheme);
 
-        // Mobile menu toggle
         const mobileBtn = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
 
         if (mobileBtn && mobileMenu) {
-            mobileBtn.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
+            mobileBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
         }
     </script>
 </body>
